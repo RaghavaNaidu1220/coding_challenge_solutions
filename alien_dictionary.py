@@ -53,10 +53,8 @@ def alien_dictionary(words):
     return "".join(order)
 
 
-def main():
-    words = ["wrt", "wrf", "er", "ett", "rftt"]
-    print("Alien dictionary order:", alien_dictionary(words))
+
+words = ["wrt", "wrf", "er", "ett", "rftt"]
+print("Alien dictionary order:", alien_dictionary(words))
 
 
-if __name__ == '__main__':
-    main()

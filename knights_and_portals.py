@@ -57,15 +57,11 @@ def knights_and_portals(grid):
     return -1
 
 
-def main():
-    grid = [
-        [0, 1, 0, 0],
-        [0, 1, 0, 1],
-        [0, 0, 0, 0],
-        [1, 1, 1, 0]
-    ]
-    print("Shortest path steps:", knights_and_portals(grid))
+grid = [
+    [0, 1, 0, 0],
+    [0, 1, 0, 1],
+    [0, 0, 0, 0],
+    [1, 1, 1, 0]
+]
+print("Shortest path steps:", knights_and_portals(grid))
 
-
-if __name__ == '__main__':
-    main()

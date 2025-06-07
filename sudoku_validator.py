@@ -53,38 +53,34 @@ def is_valid_sudoku(board, custom_zones):
     return True
 
 
-def main():
-    # A valid Sudoku board sample.
-    valid_board = [
-        ['5','3','4','6','7','8','9','1','2'],
-        ['6','7','2','1','9','5','3','4','8'],
-        ['1','9','8','3','4','2','5','6','7'],
-        ['8','5','9','7','6','1','4','2','3'],
-        ['4','2','6','8','5','3','7','9','1'],
-        ['7','1','3','9','2','4','8','5','6'],
-        ['9','6','1','5','3','7','2','8','4'],
-        ['2','8','7','4','1','9','6','3','5'],
-        ['3','4','5','2','8','6','1','7','9']
-    ]
-    # Standard custom zones (3×3 blocks).
-    custom_zones = [
-        [0,0,0,1,1,1,2,2,2],
-        [0,0,0,1,1,1,2,2,2],
-        [0,0,0,1,1,1,2,2,2],
-        [3,3,3,4,4,4,5,5,5],
-        [3,3,3,4,4,4,5,5,5],
-        [3,3,3,4,4,4,5,5,5],
-        [6,6,6,7,7,7,8,8,8],
-        [6,6,6,7,7,7,8,8,8],
-        [6,6,6,7,7,7,8,8,8]
-    ]
-    print("Testing valid sudoku:", is_valid_sudoku(valid_board, custom_zones))
+# A valid Sudoku board sample.
+valid_board = [
+    ['5','3','4','6','7','8','9','1','2'],
+    ['6','7','2','1','9','5','3','4','8'],
+    ['1','9','8','3','4','2','5','6','7'],
+    ['8','5','9','7','6','1','4','2','3'],
+    ['4','2','6','8','5','3','7','9','1'],
+    ['7','1','3','9','2','4','8','5','6'],
+    ['9','6','1','5','3','7','2','8','4'],
+    ['2','8','7','4','1','9','6','3','5'],
+    ['3','4','5','2','8','6','1','7','9']
+]
+# Standard custom zones (3×3 blocks).
+custom_zones = [
+    [0,0,0,1,1,1,2,2,2],
+    [0,0,0,1,1,1,2,2,2],
+    [0,0,0,1,1,1,2,2,2],
+    [3,3,3,4,4,4,5,5,5],
+    [3,3,3,4,4,4,5,5,5],
+    [3,3,3,4,4,4,5,5,5],
+    [6,6,6,7,7,7,8,8,8],
+    [6,6,6,7,7,7,8,8,8],
+    [6,6,6,7,7,7,8,8,8]
+]
+print("Testing valid sudoku:", is_valid_sudoku(valid_board, custom_zones))
 
-    # Introduce a duplicate in zone 0 to create an invalid board.
-    invalid_board = [row[:] for row in valid_board]
-    invalid_board[0][0] = '9'  # Duplicate '9' in the first custom zone.
-    print("Testing invalid sudoku:", is_valid_sudoku(invalid_board, custom_zones))
+# Introduce a duplicate in zone 0 to create an invalid board.
+invalid_board = [row[:] for row in valid_board]
+invalid_board[0][0] = '9'  # Duplicate '9' in the first custom zone.
+print("Testing invalid sudoku:", is_valid_sudoku(invalid_board, custom_zones))
 
-
-if __name__ == '__main__':
-    main()

@@ -86,19 +86,17 @@ class MiniInterpreter:
         return results
 
 
-def main():
-    code = """
-    let x = 5
-    let y = x + 3
-    if y > 7 then let z = y * 2 else let z = y - 2
-    z + 10
-    """
-    interpreter = MiniInterpreter()
-    results = interpreter.interpret(code)
-    print("Interpreter Results:")
-    for res in results:
-        print(res)
+
+code = """
+let x = 5
+let y = x + 3
+if y > 7 then let z = y * 2 else let z = y - 2
+z + 10
+"""
+interpreter = MiniInterpreter()
+results = interpreter.interpret(code)
+print("Interpreter Results:")
+for res in results:
+    print(res)
 
 
-if __name__ == '__main__':
-    main()

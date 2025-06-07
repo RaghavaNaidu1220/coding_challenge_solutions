@@ -41,15 +41,11 @@ def count_islands(matrix):
     return count
 
 
-def main():
-    matrix = [
-        [1, 1, 0, 0],
-        [0, 1, 0, 0],
-        [0, 0, 1, 0],
-        [1, 0, 0, 1]
-    ]
-    print("Island count:", count_islands(matrix))
+matrix = [
+    [1, 1, 0, 0],
+    [0, 1, 0, 0],
+    [0, 0, 1, 0],
+    [1, 0, 0, 1]
+]
+print("Island count:", count_islands(matrix))
 
-
-if __name__ == '__main__':
-    main()

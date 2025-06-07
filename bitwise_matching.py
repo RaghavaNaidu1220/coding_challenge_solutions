@@ -43,12 +43,8 @@ def next_higher_same_bits(n):
     return n
 
 
-def main():
-    test_values = [6, 92]  # Example: for 6 (binary 110) next should be 9 (binary 1001)
-    for n in test_values:
-        result = next_higher_same_bits(n)
-        print(f"Next higher for {n}: {result}")
 
-
-if __name__ == '__main__':
-    main()
+test_values = [6, 92]  # Example: for 6 (binary 110) next should be 9 (binary 1001)
+for n in test_values:
+    result = next_higher_same_bits(n)
+    print(f"Next higher for {n}: {result}")
